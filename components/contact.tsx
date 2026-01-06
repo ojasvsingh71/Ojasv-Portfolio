@@ -50,48 +50,47 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        <div className="space-y-8">
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 sm:py-32">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start md:items-center">
+        <div className="space-y-8 text-center md:text-left">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-6">
               Let's Chat
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
               Have a project in mind, a question, or just want to connect? I'm
               always open to discussing new opportunities and interesting ideas.
             </p>
           </div>
 
-          <div className="space-y-4">
-            <div className="flex items-center gap-4 text-gray-200">
-              <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm">
+          <div className="space-y-4 flex flex-col items-center md:items-start">
+            <div className="flex items-center gap-4 text-gray-200 w-full justify-center md:justify-start">
+              <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm shrink-0">
                 <Mail className="text-blue-400" size={24} />
               </div>
-              <div>
+              <div className="text-left">
                 <p className="text-sm text-gray-400">Mail me at</p>
                 <a
                   href="mailto:ojasvsingh0@gmail.com"
-                  className="font-medium hover:text-blue-400 transition"
+                  className="font-medium hover:text-blue-400 transition break-all"
                 >
                   ojasvsingh0@gmail.com
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-gray-200">
-              <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm">
+            <div className="flex items-center gap-4 text-gray-200 w-full justify-center md:justify-start">
+              <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm shrink-0">
                 <MapPin className="text-purple-400" size={24} />
               </div>
-              <div>
+              <div className="text-left">
                 <p className="text-sm text-gray-400">Based in</p>
                 <p className="font-medium">India</p>
               </div>
             </div>
           </div>
 
-          <div className="flex gap-4 pt-4">
+          <div className="flex gap-4 pt-4 justify-center md:justify-start">
             <a
               href="https://github.com/ojasvsingh71"
               target="_blank"
@@ -113,9 +112,9 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl"
+          className="bg-white/5 backdrop-blur-md border border-white/10 p-6 sm:p-8 rounded-2xl shadow-2xl w-full"
         >
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div>
               <label
                 className="block text-sm font-medium text-gray-300 mb-2"
@@ -128,9 +127,9 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all"
+                className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all text-sm sm:text-base"
                 type="text"
-                placeholder="Ojasv Singh"
+                placeholder="John Doe"
               />
             </div>
 
@@ -146,9 +145,9 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all"
+                className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all text-sm sm:text-base"
                 type="email"
-                placeholder="ojasv@example.com"
+                placeholder="john@example.com"
               />
             </div>
 
@@ -164,7 +163,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 required
-                className="w-full h-32 px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all resize-none"
+                className="w-full h-32 px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all resize-none text-sm sm:text-base"
                 placeholder="What's on your mind?"
               ></textarea>
             </div>
@@ -172,7 +171,7 @@ const Contact = () => {
             <button
               disabled={loading}
               type="submit"
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed text-sm sm:text-base"
             >
               {loading ? (
                 <>
