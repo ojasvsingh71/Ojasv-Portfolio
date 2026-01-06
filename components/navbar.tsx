@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import logo from "./assets/logo.png"; 
+import logo from "./assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +21,12 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent backdrop-blur-lg shadow-md fixed w-full z-50 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        {/* Optimized Image Component */}
         <Link href="/">
           <Image
             src={logo}
             alt="Logo"
             height={40}
-            width={40} // Add width/height or generic styling
+            width={40}
             className="h-10 w-auto object-contain cursor-pointer"
           />
         </Link>

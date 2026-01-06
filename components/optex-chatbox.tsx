@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { X, Bot, Send, User } from "lucide-react"; // Added generic icons
+import { X, Bot, Send, User } from "lucide-react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
@@ -74,7 +74,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
 
   return (
     <div className="fixed bottom-24 right-4 w-[90vw] sm:w-[380px] h-[500px] max-h-[75vh] flex flex-col border border-white/20 backdrop-blur-xl bg-black/60 text-white rounded-2xl shadow-2xl overflow-hidden z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
-      {/* 1. Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3 flex justify-between items-center shadow-md">
         <div className="flex items-center gap-2">
           <div className="bg-white/20 p-1.5 rounded-full">
@@ -99,9 +98,7 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
         </button>
       </div>
 
-      {/* 2. Messages Area */}
       <div className="flex-1 p-4 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-        {/* Empty State Welcome */}
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center space-y-3 opacity-80 mt-10">
             <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-4 rounded-full border border-white/10">
@@ -116,7 +113,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
           </div>
         )}
 
-        {/* Message Bubbles */}
         {messages.map((msg, idx) => (
           <div
             key={idx}
@@ -124,7 +120,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
               msg.role === "user" ? "justify-end" : "justify-start"
             }`}
           >
-            {/* Bot Avatar */}
             {msg.role === "assistant" && (
               <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0 mt-1">
                 <Bot size={14} className="text-white" />
@@ -147,7 +142,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
               )}
             </div>
 
-            {/* User Avatar (Optional) */}
             {msg.role === "user" && (
               <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-1">
                 <User size={14} className="text-white" />
@@ -156,7 +150,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
           </div>
         ))}
 
-        {/* Loading Indicator */}
         {loading && (
           <div className="flex gap-3 justify-start">
             <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0 mt-1">
@@ -173,7 +166,6 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
         <div ref={chatEndRef} />
       </div>
 
-      {/* 3. Input Area */}
       <div className="p-4 bg-black/20 border-t border-white/10 backdrop-blur-md">
         <div className="flex gap-2 relative">
           <input

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects | Ojasv Singh",
   description:
-    "A showcase of my web development projects and technical experiments.",
+    "Showcase of full-stack projects including DSA Tracker, LawSetu, and MiniMoo Chatbot built with React, Node.js, and AI.",
 };
 
 export default function ProjectsPage() {
