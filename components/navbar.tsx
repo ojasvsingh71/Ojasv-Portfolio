@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-transparent backdrop-blur-lg shadow-md fixed w-full z-50 transition-all">
+    <nav className="bg-transparent backdrop-blur-md shadow-sm fixed w-full z-50 transition-all border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/">
           <Image
@@ -27,50 +27,51 @@ const Navbar = () => {
             alt="Logo"
             height={40}
             width={40}
-            className="h-10 w-auto object-contain cursor-pointer"
+            className="h-10 w-auto object-contain cursor-pointer hover:scale-105 transition-transform"
           />
         </Link>
-
-        <div className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500"></div>
 
         <ul className="hidden md:flex space-x-8 text-white font-medium">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className="hover:text-[#BBFBFF] relative group transition"
+                className="hover:text-blue-300 relative group transition-colors duration-300"
               >
                 {label}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#8DD8FF] transition-all group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}
         </ul>
 
-        <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
-          {isOpen ? (
-            <X size={28} className="text-white" />
-          ) : (
-            <Menu size={28} className="text-white" />
-          )}
+        <div
+          className="md:hidden cursor-pointer text-white hover:text-blue-400 transition"
+          onClick={toggleMenu}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </div>
       </div>
 
       <div
-        className={`md:hidden bg-white transition-all duration-300 px-4 pt-2 pb-4 space-y-3 text-gray-700 font-medium ${
-          isOpen ? "block" : "hidden"
+        className={`md:hidden absolute w-full bg-black/90 backdrop-blur-xl border-b border-white/10 transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "max-h-[300px] opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        {navLinks.map(({ href, label }) => (
-          <Link
-            key={href}
-            href={href}
-            onClick={toggleMenu}
-            className="block border-b pb-2 hover:text-blue-600"
-          >
-            {label}
-          </Link>
-        ))}
+        <div className="px-4 pt-2 pb-6 space-y-1">
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={toggleMenu}
+              className="block px-3 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all font-medium"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );

@@ -129,7 +129,7 @@ const Contact = () => {
                 required
                 className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all text-sm sm:text-base"
                 type="text"
-                placeholder="John Doe"
+                placeholder="Ojasv Singh"
               />
             </div>
 
@@ -147,7 +147,7 @@ const Contact = () => {
                 required
                 className="w-full px-4 py-3 bg-black/20 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-500 transition-all text-sm sm:text-base"
                 type="email"
-                placeholder="john@example.com"
+                placeholder="ojasv@example.com"
               />
             </div>
 
