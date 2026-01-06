@@ -1,0 +1,80 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import logo from "./assets/logo.png"; 
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/resume", label: "Resume" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  return (
+    <nav className="bg-transparent backdrop-blur-lg shadow-md fixed w-full z-50 transition-all">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        {/* Optimized Image Component */}
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="Logo"
+            height={40}
+            width={40} // Add width/height or generic styling
+            className="h-10 w-auto object-contain cursor-pointer"
+          />
+        </Link>
+
+        <div className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500"></div>
+
+        <ul className="hidden md:flex space-x-8 text-white font-medium">
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className="hover:text-[#BBFBFF] relative group transition"
+              >
+                {label}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#8DD8FF] transition-all group-hover:w-full"></span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
+          {isOpen ? (
+            <X size={28} className="text-white" />
+          ) : (
+            <Menu size={28} className="text-white" />
+          )}
+        </div>
+      </div>
+
+      <div
+        className={`md:hidden bg-white transition-all duration-300 px-4 pt-2 pb-4 space-y-3 text-gray-700 font-medium ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
+        {navLinks.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            onClick={toggleMenu}
+            className="block border-b pb-2 hover:text-blue-600"
+          >
+            {label}
+          </Link>
+        ))}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
