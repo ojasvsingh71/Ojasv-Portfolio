@@ -10,36 +10,146 @@ import infinityAnimation from "./assets/infnity.json";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 pt-24 pb-12 overflow-hidden">
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-6 order-2 lg:order-1">
-         
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-            <span className="text-sm font-medium text-blue-300">
+    <div
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "5.5rem var(--gutter) 3rem",
+        overflow: "hidden",
+        color: "#f8fafc",
+      }}
+    >
+      {/* Background radial glow */}
+      <div
+        style={{
+          position: "absolute",
+          top: "25%",
+          left: "5%",
+          width: "450px",
+          height: "450px",
+          background: "radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+
+      <div
+        style={{
+          maxWidth: "var(--container)",
+          width: "100%",
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "3.5rem",
+          alignItems: "center",
+          position: "relative",
+          zIndex: 1,
+        }}
+        className="hero-grid"
+      >
+        {/* LEFT: text content */}
+        <div
+          className="fade-up"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            gap: "1.5rem",
+          }}
+        >
+          {/* Open to Work badge */}
+          <div
+            className="fade-up fade-up-delay-1"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.4rem 1.1rem",
+              borderRadius: "var(--radius-full)",
+              background: "rgba(59, 130, 246, 0.15)",
+              border: "1px solid rgba(59, 130, 246, 0.35)",
+              backdropFilter: "blur(12px)",
+            }}
+          >
+            <span
+              className="pulse-dot"
+              style={{
+                width: "9px",
+                height: "9px",
+                borderRadius: "50%",
+                background: "#4ade80",
+                flexShrink: 0,
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 600,
+                fontSize: "0.85rem",
+                color: "#93c5fd",
+                letterSpacing: "0.04em",
+              }}
+            >
               Open to Work
             </span>
           </div>
 
-          <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl font-medium text-gray-300">
-              Hi There! I'm
-            </h2>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
-                Ojasv Singh
-              </span>
+          {/* Name */}
+          <div className="fade-up fade-up-delay-1">
+            <p
+              style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "1.2rem",
+                color: "#cbd5e1",
+                marginBottom: "0.4rem",
+                fontWeight: 500,
+              }}
+            >
+              Hi There! I&apos;m
+            </p>
+            <h1
+              style={{
+                fontFamily: "'Outfit', sans-serif",
+                fontSize: "clamp(3.2rem, 8vw, 5.2rem)",
+                fontWeight: 800,
+                lineHeight: 1.25,
+                letterSpacing: "-0.03em",
+                background: "linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                display: "inline-block",
+                paddingBottom: "0.15em",
+              }}
+            >
+              Ojasv Singh
             </h1>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-200 h-10 md:h-12 flex items-center justify-center lg:justify-start">
-            <span className="text-blue-400 mr-2">{">"}</span>
+          {/* Typewriter */}
+          <h2
+            className="fade-up fade-up-delay-2"
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: "clamp(1.3rem, 3.5vw, 1.9rem)",
+              fontWeight: 700,
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              minHeight: "2.8rem",
+            }}
+          >
+            <span style={{ color: "#60a5fa" }}>&gt;</span>
             <Typewriter
               words={[
-                "Full Stack Developer",
-                "DSA Enthusiast",
+                "Full Stack MERN Developer",
+                "AWS Certified Practitioner",
+                "1000+ DSA Problems Solved",
                 "Open Source Contributor",
-                "Tech Explorer",
               ]}
               loop={true}
               cursor
@@ -50,35 +160,52 @@ const Hero = () => {
             />
           </h2>
 
-          <p className="text-gray-400 text-base sm:text-lg max-w-lg leading-relaxed">
-            I build accessible, pixel-perfect, and performant web experiences.
-            Focused on crafting clean code and solving complex algorithmic
-            challenges.
+          {/* Bio */}
+          <p
+            className="fade-up fade-up-delay-2"
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              color: "#cbd5e1",
+              fontSize: "1.05rem",
+              lineHeight: 1.8,
+              maxWidth: "500px",
+            }}
+          >
+            I build scalable, pixel-perfect, and high-performance web applications.
+            Focused on clean architecture, AI-enabled tools, and solving complex algorithmic challenges.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-            <Link
-              href="/projects"
-              className="flex items-center justify-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all hover:scale-105 shadow-lg shadow-blue-500/25 w-full sm:w-auto"
-            >
-              View My Work <ArrowRight size={20} />
+          {/* CTAs */}
+          <div
+            className="fade-up fade-up-delay-3"
+            style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center", paddingTop: "0.5rem" }}
+          >
+            <Link href="/projects" className="btn-primary">
+              View My Work <ArrowRight size={18} />
             </Link>
-
-            <Link
-              href="/resume"
-              className="flex items-center justify-center gap-2 px-8 py-3 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-medium transition-all backdrop-blur-sm w-full sm:w-auto"
-            >
-              Resume <FileText size={20} />
+            <Link href="/resume" className="btn-ghost">
+              Resume <FileText size={18} />
             </Link>
           </div>
 
-          <div className="flex items-center gap-6 mt-8 p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
+          {/* Social links */}
+          <div
+            className="glass-card fade-up fade-up-delay-4"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "2rem",
+              padding: "0.9rem 1.85rem",
+              marginTop: "0.5rem",
+            }}
+          >
             <a
               href="https://github.com/ojasvsingh71"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white hover:scale-110 transition-all text-2xl"
               title="GitHub"
+              style={{ color: "#cbd5e1", fontSize: "1.4rem", transition: "all 0.25s", display: "flex" }}
+              className="social-icon"
             >
               <FaGithub />
             </a>
@@ -86,8 +213,9 @@ const Hero = () => {
               href="https://www.linkedin.com/in/ojasv-singh-b80b52326/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all text-2xl"
               title="LinkedIn"
+              style={{ color: "#60a5fa", fontSize: "1.4rem", transition: "all 0.25s", display: "flex" }}
+              className="social-icon"
             >
               <FaLinkedin />
             </a>
@@ -95,21 +223,45 @@ const Hero = () => {
               href="https://leetcode.com/u/ojasvsingh1971/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-500 hover:scale-110 transition-all text-2xl"
               title="LeetCode"
+              style={{ color: "#fbbf24", fontSize: "1.4rem", transition: "all 0.25s", display: "flex" }}
+              className="social-icon"
             >
               <SiLeetcode />
             </a>
           </div>
         </div>
 
-        <div className="flex justify-center items-center order-1 lg:order-2 w-full">
-          <div className="w-full max-w-[280px] sm:max-w-md lg:max-w-xl relative">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] bg-blue-500/20 rounded-full blur-[80px] -z-10"></div>
+        {/* RIGHT: Lottie */}
+        <div
+          className="fade-up fade-up-delay-2 hero-right"
+          style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative" }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              width: "400px",
+              height: "400px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 70%)",
+              pointerEvents: "none",
+            }}
+          />
+          <div style={{ width: "100%", maxWidth: "440px", position: "relative" }}>
             <Lottie animationData={infinityAnimation} loop={true} />
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (min-width: 1024px) {
+          .hero-grid { grid-template-columns: 1.15fr 0.85fr !important; }
+          .hero-right { order: 1; }
+          .fade-up { align-items: flex-start !important; text-align: left !important; }
+          .fade-up h2, .fade-up div { justify-content: flex-start !important; }
+        }
+        .social-icon:hover { color: #ffffff !important; transform: scale(1.15); }
+      `}</style>
     </div>
   );
 };
