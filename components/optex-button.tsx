@@ -9,7 +9,17 @@ interface OptexButtonProps {
 
 const OptexButton = ({ onClick }: OptexButtonProps) => {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-end">
+    <div
+      style={{
+        position: "fixed",
+        bottom: "1.5rem",
+        right: "1.5rem",
+        zIndex: 9999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-end",
+      }}
+    >
       <button
         onClick={onClick}
         className="group relative flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_rgba(37,99,235,0.8)] transition-all duration-300 hover:pr-6 hover:pl-5 active:scale-95"

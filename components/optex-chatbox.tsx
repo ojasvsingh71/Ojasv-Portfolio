@@ -73,7 +73,15 @@ const OptexChatBox = ({ onClose }: OptexChatBoxProps) => {
   };
 
   return (
-    <div className="fixed bottom-24 right-4 w-[90vw] sm:w-[380px] h-[500px] max-h-[75vh] flex flex-col border border-white/20 backdrop-blur-xl bg-black/60 text-white rounded-2xl shadow-2xl overflow-hidden z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
+    <div
+      style={{
+        position: "fixed",
+        bottom: "5.5rem",
+        right: "1.5rem",
+        zIndex: 9999,
+      }}
+      className="w-[90vw] sm:w-[380px] h-[500px] max-h-[75vh] flex flex-col border border-white/20 backdrop-blur-xl bg-black/80 text-white rounded-2xl shadow-2xl overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300"
+    >
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3 flex justify-between items-center shadow-md">
         <div className="flex items-center gap-2">
           <div className="bg-white/20 p-1.5 rounded-full">

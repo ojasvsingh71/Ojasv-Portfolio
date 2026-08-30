@@ -81,7 +81,7 @@ body::after {
   z-index: 0;
 }
 
-#__next, main, nav, footer, div {
+#__next, main, nav, footer {
   position: relative;
   z-index: 1;
 }

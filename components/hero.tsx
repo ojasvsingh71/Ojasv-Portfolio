@@ -14,9 +14,10 @@ const Hero = () => {
       style={{
         minHeight: "100vh",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        padding: "5.5rem var(--gutter) 3rem",
+        justifyContent: "flex-start",
+        padding: "4.75rem var(--gutter) 2.5rem",
         overflow: "hidden",
         color: "#f8fafc",
       }}
