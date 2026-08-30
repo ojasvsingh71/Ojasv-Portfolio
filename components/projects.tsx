@@ -15,15 +15,15 @@ const projectsData: Project[] = [
   {
     title: "DSA Tracker Leaderboard",
     description:
-      "Architected a MERN-stack leaderboard tracking cross-platform DSA progress (LeetCode, CodeChef, Codeforces) for 100+ students with real-time stats, streaks, difficulty breakdowns, and cron-based daily auto-sync.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "REST & GraphQL"],
+      "Architected a MERN-stack leaderboard tracking cross-platform DSA progress (LeetCode, CodeChef, Codeforces) for 100+ students with real-time stats—solved counts, streaks, and difficulty breakdowns. Designed RESTful APIs with JWT auth, group management, and cron-based daily auto-sync.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "REST & GraphQL APIs"],
     link: "https://dsa-tracker-leaderboard.vercel.app",
     github: "https://github.com/ojasvsingh71/DSA-Tracker-LeaderBoard",
   },
   {
-    title: "LawSetu - AI Legal Documentation Platform",
+    title: "LawSetu – AI Legal Documentation Platform",
     description:
-      "AI-driven legal platform with OpenAI-powered contract drafting, live Markdown preview, and PDF export supporting 5+ legal templates (NDA, Employment, Lease) with Google OAuth + OCR upload.",
+      "Launched an AI-driven legal platform with OpenAI-powered contract drafting, Markdown editor, live preview, and PDF export (supports 5+ legal templates). Integrated Google OAuth + JWT authentication and OCR-based upload for PDF, image, and text files; shipped on Vercel + Render.",
     tech: ["Next.js", "Node.js", "MongoDB", "OpenAI API", "Google OAuth", "Passport.js"],
     link: "https://law-setu.vercel.app/",
     github: "https://github.com/ojasvsingh71/LawSetu",

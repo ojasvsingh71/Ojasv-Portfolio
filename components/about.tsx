@@ -151,57 +151,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* Education & Experience Row */}
-        <div
-          className="fade-up fade-up-delay-2 about-grid"
-          style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem", marginBottom: "1.25rem" }}
-        >
-          {/* Education card */}
+        {/* Experience Section - Full Width Bento */}
+        <div className="fade-up fade-up-delay-2" style={{ marginBottom: "1.25rem" }}>
           <div
             className="glass-card"
             style={{
-              padding: "2rem",
-              transition: "border-color 0.3s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(74,222,128,0.4)")}
-            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)")}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-              <GraduationCap size={26} color="#4ade80" />
-              <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#ffffff" }}>
-                Education
-              </h3>
-            </div>
-            <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "1.05rem", marginBottom: "0.3rem" }}>
-              B.Tech in Computer Science &amp; Information Technology
-            </h4>
-            <p style={{ color: "#93c5fd", fontSize: "0.95rem", marginBottom: "0.5rem" }}>
-              KIET Group of Institutions (AKTU)
-            </p>
-            <p style={{ color: "#94a3b8", fontSize: "0.85rem", marginBottom: "1.2rem" }}>
-              Expected Jul 2028 | Coursework: DSA, OS, DBMS, OOP
-            </p>
-            <span
-              style={{
-                display: "inline-block",
-                padding: "0.35rem 0.85rem",
-                background: "rgba(74,222,128,0.15)",
-                border: "1px solid rgba(74,222,128,0.35)",
-                borderRadius: "var(--radius-sm)",
-                color: "#4ade80",
-                fontWeight: 700,
-                fontSize: "0.9rem",
-              }}
-            >
-              CGPA: 9.46 / 10.0
-            </span>
-          </div>
-
-          {/* Experience card */}
-          <div
-            className="glass-card"
-            style={{
-              padding: "2rem",
+              padding: "2.25rem",
               transition: "border-color 0.3s ease",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(168,85,247,0.4)")}
@@ -209,39 +164,209 @@ const About = () => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.5rem" }}>
               <Briefcase size={26} color="#a78bfa" />
-              <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#ffffff" }}>
-                Experience
+              <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.3rem", color: "#ffffff" }}>
+                Work Experience
               </h3>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.5rem" }} className="exp-grid">
-              <div style={{ borderLeft: "2px solid rgba(168,85,247,0.6)", paddingLeft: "1rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
-                  <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.95rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "2rem" }} className="exp-grid">
+              {/* Sparklog Ventures */}
+              <div
+                style={{
+                  background: "rgba(15, 23, 42, 0.6)",
+                  border: "1px solid rgba(168,85,247,0.25)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "1.5rem",
+                  borderLeft: "3px solid #a855f7",
+                }}
+              >
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.4rem" }}>
+                  <h4 style={{ fontWeight: 700, color: "#ffffff", fontSize: "1.05rem" }}>
                     Web Dev &amp; Automation Intern
                   </h4>
-                  <span style={{ fontSize: "0.78rem", color: "#94a3b8" }}>Nov 2025 - Apr 2026</span>
+                  <span
+                    style={{
+                      fontSize: "0.8rem",
+                      color: "#c084fc",
+                      background: "rgba(168,85,247,0.15)",
+                      padding: "0.2rem 0.65rem",
+                      borderRadius: "var(--radius-full)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Nov 2025 – Apr 2026
+                  </span>
                 </div>
-                <p style={{ color: "#c084fc", fontSize: "0.88rem", fontWeight: 600, marginBottom: "0.4rem" }}>
+                <p style={{ color: "#93c5fd", fontSize: "0.92rem", fontWeight: 600, marginBottom: "0.85rem" }}>
                   Sparklog Ventures LLP
                 </p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", lineHeight: 1.6 }}>
-                  Automated Python reporting pipelines (-60% manual effort), integrated Supabase DBs across 3+ internal tools, engineered Next.js frontend resolving 15+ production issues.
-                </p>
+                <ul style={{ color: "#cbd5e1", fontSize: "0.88rem", lineHeight: 1.65, paddingLeft: "1.2rem", margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                  <li>Automated Excel reporting workflows using Python, reducing manual effort by ~60% across internal operations.</li>
+                  <li>Integrated Supabase PostgreSQL databases and REST APIs for data storage and reporting pipelines across 3+ internal tools.</li>
+                  <li>Engineered responsive Next.js frontend components, resolving 15+ production bugs and accelerating feature delivery.</li>
+                </ul>
               </div>
 
-              <div style={{ borderLeft: "2px solid rgba(59,130,246,0.6)", paddingLeft: "1rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap" }}>
-                  <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.95rem" }}>
+              {/* CPByte */}
+              <div
+                style={{
+                  background: "rgba(15, 23, 42, 0.6)",
+                  border: "1px solid rgba(59,130,246,0.25)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "1.5rem",
+                  borderLeft: "3px solid #3b82f6",
+                }}
+              >
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.4rem" }}>
+                  <h4 style={{ fontWeight: 700, color: "#ffffff", fontSize: "1.05rem" }}>
                     Web Dev Contributor
                   </h4>
-                  <span style={{ fontSize: "0.78rem", color: "#94a3b8" }}>Mar 2024 - Present</span>
+                  <span
+                    style={{
+                      fontSize: "0.8rem",
+                      color: "#60a5fa",
+                      background: "rgba(59,130,246,0.15)",
+                      padding: "0.2rem 0.65rem",
+                      borderRadius: "var(--radius-full)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Mar 2024 – Present
+                  </span>
                 </div>
-                <p style={{ color: "#60a5fa", fontSize: "0.88rem", fontWeight: 600, marginBottom: "0.4rem" }}>
+                <p style={{ color: "#93c5fd", fontSize: "0.92rem", fontWeight: 600, marginBottom: "0.85rem" }}>
                   CPByte, KIET Group of Institutions
                 </p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", lineHeight: 1.6 }}>
-                  Crafted Next.js + Tailwind components across 10+ pages, implemented auth &amp; event portal modules for 200+ users, improved load speed by 25%.
-                </p>
+                <ul style={{ color: "#cbd5e1", fontSize: "0.88rem", lineHeight: 1.65, paddingLeft: "1.2rem", margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                  <li>Crafted reusable UI components with Next.js and Tailwind CSS, improving code reusability across 10+ pages.</li>
+                  <li>Implemented authentication, dashboard, and event registration modules for student portal serving 200+ active users.</li>
+                  <li>Optimized portal load time by 25% via component refactoring, lazy loading, and frontend performance tuning.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Education & Certifications Row - Symmetrical Pair */}
+        <div
+          className="fade-up fade-up-delay-3"
+          style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem", marginBottom: "1.25rem" }}
+          id="edu-cert-grid"
+        >
+          {/* Education card */}
+          <div
+            className="glass-card"
+            style={{
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              transition: "border-color 0.3s ease",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(74,222,128,0.4)")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)")}
+          >
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.2rem" }}>
+                <GraduationCap size={26} color="#4ade80" />
+                <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#ffffff" }}>
+                  Education
+                </h3>
+              </div>
+              <h4 style={{ fontWeight: 700, color: "#ffffff", fontSize: "1.1rem", marginBottom: "0.35rem" }}>
+                B.Tech in Computer Science &amp; Information Technology
+              </h4>
+              <p style={{ color: "#93c5fd", fontSize: "0.95rem", fontWeight: 500, marginBottom: "0.3rem" }}>
+                KIET Group of Institutions, Ghaziabad
+              </p>
+              <p style={{ color: "#94a3b8", fontSize: "0.85rem", marginBottom: "1rem" }}>
+                Dr. A.P.J. Abdul Kalam Technical University (AKTU) • Expected Jul 2028
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem", marginBottom: "1.25rem" }}>
+                <span
+                  style={{
+                    display: "inline-block",
+                    padding: "0.4rem 0.9rem",
+                    background: "rgba(74,222,128,0.15)",
+                    border: "1px solid rgba(74,222,128,0.35)",
+                    borderRadius: "var(--radius-md)",
+                    color: "#4ade80",
+                    fontWeight: 700,
+                    fontSize: "0.92rem",
+                  }}
+                >
+                  CGPA: 9.46 / 10.0
+                </span>
+                <span
+                  style={{
+                    display: "inline-block",
+                    padding: "0.4rem 0.9rem",
+                    background: "rgba(59,130,246,0.15)",
+                    border: "1px solid rgba(59,130,246,0.35)",
+                    borderRadius: "var(--radius-md)",
+                    color: "#93c5fd",
+                    fontWeight: 600,
+                    fontSize: "0.85rem",
+                  }}
+                >
+                  Top Academic Standing
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <p style={{ color: "#cbd5e1", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                Relevant Coursework
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
+                {["Data Structures & Algorithms", "Operating Systems", "DBMS", "Object-Oriented Programming"].map((course, cIdx) => (
+                  <span key={cIdx} className="chip" style={{ fontSize: "0.78rem" }}>
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <div
+            className="glass-card"
+            style={{
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              transition: "border-color 0.3s ease",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(251,191,36,0.4)")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)")}
+          >
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.2rem" }}>
+                <Award size={26} color="#fbbf24" />
+                <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#ffffff" }}>
+                  AWS Certifications
+                </h3>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.25)", borderRadius: "var(--radius-md)", padding: "1.1rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+                    <h4 style={{ fontWeight: 700, color: "#fbbf24", fontSize: "0.95rem" }}>AWS Certified Cloud Practitioner</h4>
+                    <span className="chip" style={{ borderColor: "rgba(245,158,11,0.35)", color: "#fbbf24", background: "rgba(245,158,11,0.15)" }}>AWS</span>
+                  </div>
+                  <p style={{ color: "#cbd5e1", fontSize: "0.85rem", marginTop: "0.4rem", lineHeight: 1.5 }}>
+                    Cloud architecture, core AWS services, security, pricing models, and networking fundamentals.
+                  </p>
+                </div>
+
+                <div style={{ background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.25)", borderRadius: "var(--radius-md)", padding: "1.1rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+                    <h4 style={{ fontWeight: 700, color: "#a5b4fc", fontSize: "0.95rem" }}>AWS Certified AI Practitioner</h4>
+                    <span className="chip" style={{ borderColor: "rgba(99,102,241,0.35)", color: "#a5b4fc", background: "rgba(99,102,241,0.15)" }}>AWS</span>
+                  </div>
+                  <p style={{ color: "#cbd5e1", fontSize: "0.85rem", marginTop: "0.4rem", lineHeight: 1.5 }}>
+                    AI/ML fundamentals, generative AI concepts, responsible AI practices, and AWS AI/ML services.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -296,44 +421,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Certifications & Leadership Row */}
-        <div
-          className="fade-up fade-up-delay-4"
-          style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.25rem" }}
-          id="cert-lead-grid"
-        >
-          {/* Certifications */}
-          <div className="glass-card" style={{ padding: "2rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
-              <Award size={24} color="#fbbf24" />
-              <h3 style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#ffffff" }}>
-                Certifications
-              </h3>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <div style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.25)", borderRadius: "var(--radius-md)", padding: "1.1rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-                  <h4 style={{ fontWeight: 600, color: "#fbbf24", fontSize: "0.95rem" }}>AWS Certified Cloud Practitioner</h4>
-                  <span className="chip" style={{ borderColor: "rgba(245,158,11,0.35)", color: "#fbbf24", background: "rgba(245,158,11,0.15)" }}>AWS</span>
-                </div>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", marginTop: "0.4rem", lineHeight: 1.5 }}>
-                  Cloud architecture, core services, security, pricing, and networking fundamentals.
-                </p>
-              </div>
-
-              <div style={{ background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.25)", borderRadius: "var(--radius-md)", padding: "1.1rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-                  <h4 style={{ fontWeight: 600, color: "#a5b4fc", fontSize: "0.95rem" }}>AWS Certified AI Practitioner</h4>
-                  <span className="chip" style={{ borderColor: "rgba(99,102,241,0.35)", color: "#a5b4fc", background: "rgba(99,102,241,0.15)" }}>AWS</span>
-                </div>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", marginTop: "0.4rem", lineHeight: 1.5 }}>
-                  AI/ML fundamentals, generative AI concepts, responsible AI practices, and AWS AI/ML services.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Leadership & Activities */}
+        {/* Leadership & Activities Full Width */}
+        <div className="fade-up fade-up-delay-4">
           <div className="glass-card" style={{ padding: "2rem" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
               <Users size={24} color="#38bdf8" />
@@ -341,28 +430,44 @@ const About = () => {
                 Leadership &amp; Activities
               </h3>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
-              <div style={{ borderLeft: "2px solid #38bdf8", paddingLeft: "1rem" }}>
-                <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.95rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.5rem" }} className="lead-grid">
+              <div
+                style={{
+                  background: "rgba(15, 23, 42, 0.6)",
+                  border: "1px solid rgba(56,189,248,0.25)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "1.25rem",
+                  borderLeft: "3px solid #38bdf8",
+                }}
+              >
+                <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.98rem", marginBottom: "0.25rem" }}>
                   Web &amp; CP/DSA Coordinator
                 </h4>
-                <p style={{ color: "#38bdf8", fontSize: "0.85rem", fontWeight: 500, marginBottom: "0.25rem" }}>
+                <p style={{ color: "#38bdf8", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem" }}>
                   CPByte, Technocrats, DevUps
                 </p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", lineHeight: 1.6 }}>
-                  Organized 5+ workshops on DSA, competitive programming, and MERN stack; mentored 50+ junior students.
+                <p style={{ color: "#cbd5e1", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  Organized 5+ workshops on DSA, competitive programming, and MERN stack; mentored 50+ junior students in web development and algorithmic problem solving.
                 </p>
               </div>
 
-              <div style={{ borderLeft: "2px solid #818cf8", paddingLeft: "1rem" }}>
-                <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.95rem" }}>
+              <div
+                style={{
+                  background: "rgba(15, 23, 42, 0.6)",
+                  border: "1px solid rgba(129,140,248,0.25)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "1.25rem",
+                  borderLeft: "3px solid #818cf8",
+                }}
+              >
+                <h4 style={{ fontWeight: 600, color: "#ffffff", fontSize: "0.98rem", marginBottom: "0.25rem" }}>
                   Member - KIET Koders Korner
                 </h4>
-                <p style={{ color: "#818cf8", fontSize: "0.85rem", fontWeight: 500, marginBottom: "0.25rem" }}>
+                <p style={{ color: "#818cf8", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.5rem" }}>
                   Competitive Programming Community
                 </p>
-                <p style={{ color: "#cbd5e1", fontSize: "0.85rem", lineHeight: 1.6 }}>
-                  Actively competed in 10+ programming contests and peer DSA sessions, strengthening algorithmic problem-solving skills.
+                <p style={{ color: "#cbd5e1", fontSize: "0.88rem", lineHeight: 1.6 }}>
+                  Actively competed in 10+ programming contests and peer DSA sessions, strengthening algorithmic problem-solving skills across LeetCode, Codeforces, and CodeChef.
                 </p>
               </div>
             </div>
@@ -376,7 +481,8 @@ const About = () => {
             grid-template-columns: 2fr 1fr !important;
           }
           .exp-grid { grid-template-columns: 1fr 1fr !important; }
-          #cert-lead-grid { grid-template-columns: 1fr 1fr !important; }
+          #edu-cert-grid { grid-template-columns: 1fr 1fr !important; }
+          .lead-grid { grid-template-columns: 1fr 1fr !important; }
         }
       `}</style>
     </div>

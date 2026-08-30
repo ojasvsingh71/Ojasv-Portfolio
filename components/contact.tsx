@@ -2,7 +2,7 @@
 
 import { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "emailjs-com";
-import { Mail, MapPin, Send, Github, Linkedin, Loader2, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Github, Linkedin, Loader2, MessageSquare } from "lucide-react";
 
 interface ContactForm {
   name: string;
@@ -101,6 +101,35 @@ const Contact = () => {
             >
               <div
                 style={{
+                  background: "rgba(74,222,128,0.2)",
+                  padding: "0.75rem",
+                  borderRadius: "var(--radius-full)",
+                  flexShrink: 0,
+                }}
+              >
+                <Phone size={22} color="#4ade80" />
+              </div>
+              <div>
+                <p style={{ color: "#94a3b8", fontSize: "0.78rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                  Call / WhatsApp
+                </p>
+                <a
+                  href="tel:+919236591912"
+                  style={{ color: "#ffffff", fontWeight: 600, textDecoration: "none", fontSize: "0.95rem", transition: "color 0.2s" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#4ade80")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "#ffffff")}
+                >
+                  +91-9236591912
+                </a>
+              </div>
+            </div>
+
+            <div
+              className="glass-card"
+              style={{ display: "flex", alignItems: "center", gap: "1.2rem", padding: "1.25rem 1.5rem" }}
+            >
+              <div
+                style={{
                   background: "rgba(168,85,247,0.2)",
                   padding: "0.75rem",
                   borderRadius: "var(--radius-full)",
@@ -113,7 +142,7 @@ const Contact = () => {
                 <p style={{ color: "#94a3b8", fontSize: "0.78rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>
                   Based in
                 </p>
-                <p style={{ color: "#ffffff", fontWeight: 600, fontSize: "0.95rem" }}>India</p>
+                <p style={{ color: "#ffffff", fontWeight: 600, fontSize: "0.95rem" }}>Ghaziabad / Uttar Pradesh, India</p>
               </div>
             </div>
           </div>

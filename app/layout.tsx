@@ -15,13 +15,14 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Portfolio of Ojasv Singh, a passionate Full Stack Developer and B.Tech student at KIET. Specializing in MERN Stack, Next.js, and solving complex DSA problems (800+ Solved).",
+    "Portfolio of Ojasv Singh, a passionate Full Stack MERN Developer, AWS Certified Practitioner, and B.Tech student at KIET. Specializing in React, Next.js, Node.js, and 1000+ DSA problems solved.",
 
   keywords: [
     "Ojasv Singh",
     "Full Stack Developer",
-    "Web Developer",
-    "MERN Stack",
+    "MERN Stack Developer",
+    "AWS Certified Cloud Practitioner",
+    "AWS Certified AI Practitioner",
     "Next.js Developer",
     "React Developer",
     "Software Engineer",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     url: BASE_URL,
     title: "Ojasv Singh | Full Stack Developer",
     description:
-      "Explore the projects and skills of Ojasv Singh, a Full Stack Developer with 800+ DSA problems solved.",
+      "Explore the projects, experience, certifications, and skills of Ojasv Singh, a Full Stack MERN Developer with 1000+ DSA problems solved and AWS Certifications.",
     siteName: "Ojasv Singh Portfolio",
     images: [
       {
